@@ -14,7 +14,7 @@ void roundRobinScheduling(int bt[], int n, int quantum) {
         int allProcessesComplete = 1;
 
         for (int i = 0; i < n; i++) {
-            if (remainingTime[i] > 0) {
+            if (remainingTime[i] > 0) {	
                 allProcessesComplete = 0;
 
                 if (remainingTime[i] <= quantum) {
