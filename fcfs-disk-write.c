@@ -5,7 +5,7 @@ int main()
     int t[20], n, i, tohm[20], tot = 0;
     float avhm;
 
-    printf("Enter the number of tracks: ");
+    printf("Enter the number of tracks(MAX 20): ");
     scanf("%d", &n);
 
     printf("Enter the tracks to be traversed: ");
@@ -16,7 +16,7 @@ int main()
     for (i = 0; i < n - 1; i++) {
         tohm[i] = t[i + 1] - t[i];
         if (tohm[i] < 0)
-            tohm[i] = tohm[i] * (-1);
+            tohm[i] *= (-1);
     }
 
     for (i = 0; i < n - 1; i++) {
@@ -30,7 +30,7 @@ int main()
         printf("%d\t\t\t%d\n", t[i], tohm[i]);
     }
     printf("\nTotal Head movement is: %d",tot);
-    printf("\nAverage header movements: %.2f\n", avhm);
+    printf("\nAverage head movements: %.2f\n", avhm);
 
     return 0;
 }
